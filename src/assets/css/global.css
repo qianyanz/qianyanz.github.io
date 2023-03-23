@@ -1,0 +1,9 @@
+html,
+body,
+#app,
+#home,
+.n-config-provider {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
