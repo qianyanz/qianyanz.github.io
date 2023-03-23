@@ -5,6 +5,14 @@ import { zhCN, dateZhCN } from 'naive-ui'
 
 import dayjs from 'dayjs'
 import { ref, onMounted, onBeforeMount } from 'vue'
+import { getInfo } from './api/blog'
+
+getInfo().then((res) => {
+  console.log("getInfo")
+  if (res.data) {
+    console.log(res.data)
+  }
+})
 
 // 判断时间点或者按钮，切换 dark 模式
 const theme = ref(darkTheme)
