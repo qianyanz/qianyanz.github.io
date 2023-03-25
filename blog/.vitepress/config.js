@@ -2,12 +2,9 @@ import { defineConfig } from 'vitepress'
 import fs from 'node:fs'
 import path from 'node:path'
 
-
-
-
 const genItem = (dir) => {
   let navList = []
-  let loaclPath = path.resolve(__dirname, '..') + '\\' + dir
+  let loaclPath = path.resolve(__dirname, '..') + '/' + dir
   let dirs = fs.readdirSync(loaclPath)
   dirs.forEach((item) => {
     let fullPath = path.join(loaclPath, item)
