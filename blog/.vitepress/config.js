@@ -9,7 +9,7 @@ const genItem = (dir) => {
   dirs.forEach((item) => {
     let fullPath = path.join(loaclPath, item)
     let stats = fs.statSync(fullPath)
-    subItem = item.substring(0, item.lastIndexOf('.'))
+    let subItem = item.substring(0, item.lastIndexOf('.'))
     if ('index' === subItem) return
     if (stats.isDirectory()) {
     } else {

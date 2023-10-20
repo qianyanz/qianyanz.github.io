@@ -30,3 +30,4 @@ coverage
 #vitepress
 blog/.vitepress/cache
 blog/.vitepress/dist
+blog/.obsidian

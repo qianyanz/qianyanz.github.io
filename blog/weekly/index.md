@@ -15,7 +15,7 @@ siderbar.forEach((bar)=>{
 
 ## 文件列表
 
-<a v-for="item in articleList" href='item.link'>
+<a v-for="item in articleList" :href='item.link'>
   {{ item.text }}
   <br>
 </a>
