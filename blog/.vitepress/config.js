@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import fs from 'node:fs'
 import path from 'node:path'
 
+// get artical list
 const genItem = (dir) => {
   let navList = []
   let loaclPath = path.resolve(__dirname, '..') + '/' + dir
@@ -23,6 +24,10 @@ const genItem = (dir) => {
   return navList
 }
 
+// Generate directory
+const posts = genItem('posts').reverse()
+const weekly = genItem('weekly').reverse()
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "QianYanz's Blog",
@@ -42,20 +47,18 @@ export default defineConfig({
       {
         collapsed: true,
         text: '文章',
-        items: genItem('posts')
+        items: posts
       },
       {
         collapsed: true,
         text: '周报',
-        items: genItem('weekly')
+        items: weekly
       }
     ],
-
     socialLinks: [{ icon: 'github', link: 'https://github.com/qianyanz' }],
-
     footer: {
-      message: '这个信息只能是静态的，需要重写',
-      copyright: 'Copyright © '
+      message: '',
+      copyright: ''
     }
   }
 })
